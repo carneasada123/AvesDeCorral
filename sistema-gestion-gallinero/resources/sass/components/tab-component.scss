@@ -1,0 +1,460 @@
+.component-gestion-mantenimiento {
+    //background-color:cornflowerblue;
+
+    .titulo-bienvenida {
+        background-color: #faebd7;
+
+        .content-title {
+            margin: 12px 0;
+            place-content: center;
+            display: flex;
+
+            img {
+                margin-right: 10px;
+                width: 70px;
+            }
+
+            .title {
+                font-family: Rubik;
+                align-content: center;
+                margin-bottom: 0;
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                font-weight: 600;
+                font-size: 26px;
+            }
+        }
+    }
+
+    .content-main-usuario {
+        background-color: #e36363;
+        display: flex;
+        align-items: center;
+        padding: 8px 8px;
+
+        .perfil-inicio-sesion {
+            .content-perfil {
+                //display: flex;
+                justify-items: center;
+                align-items: center;
+
+                .title {
+                    margin-left: 10px;
+                }
+
+                .subtitle {
+                    margin-left: 10px;
+                }
+
+                p {
+                    font-family: Rubik;
+                    margin-bottom: 0;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .perfil-cerrar-sesion {
+            .boton-logout {
+                display: flex;
+                align-items: center;
+                border: 2px solid #000;
+                background-color: #fff;
+                color: #000;
+                padding: 7px;
+                width: 120px;
+                font-weight: bold;
+                float: inline-end;
+                font-size: 10px;
+
+                img {
+                    margin-left: 10px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                    font-family: Rubik;
+                    align-content: center;
+                }
+            }
+
+            .boton-logout:hover {
+                color: #fefffe;
+                background-color: #166eff;
+                transition: .4s;
+            }
+        }
+    }
+
+    hr {
+        border: 2px solid #166eff;
+        opacity: 1;
+    }
+
+    .tabs-main-content {
+        .tab-list {
+            display: list-item;
+            padding: 8px 25px;
+            place-content: center;
+            position: relative;
+            z-index: 1;
+
+            .nav-item {
+                margin: 8px 8px;
+
+                .nav-link {
+                text-align-last: center;
+                background-color: black !important;
+                font-size: 14px;
+                padding: 7px 12px;
+
+                    img {
+                        width: 32px;
+                        margin-right: 8px;
+                    }
+                }
+
+                .nav-link:hover {
+                background-color: #222222 !important;
+                color: white !important;
+                }
+
+                .nav-link.active {
+                background-color: #078C41 !important;
+                }
+            }
+        }
+
+        .tab-content {
+            .contenedor-modal-1-tabla-mantenimiento, .contenedor-modal-1-tabla-no-entregado, .contenedor-modal-2-mat-entregados, .contenedor-modal-2-mat-entrega-parcial, .contenedor-modal-2-insertar-mantenimiento, .contenedor-modal-3-tabla-usuarios, .contenedor-modal-4-insertar-registro, .contenedor-modal-5-insertar-servicio, .contenedor-modal-6-insertar-material, .contenedor-modal-7-insertar-json {
+                justify-self: center;
+
+                input, select {
+                    box-shadow: 0px 5px 7px #b8b8b8;
+                }
+
+                b {
+                    font-size: 10px;
+                    padding-left: 10px;
+                    color: #740624;
+                }
+
+                hr {
+                    border: 2px solid #166eff;
+                    opacity: 1;
+                }
+
+                label {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                .form-control, .form-select{
+                    border: 2px solid #000;
+                }
+
+                .select2-container {
+                    border: 2px solid #000;
+                    border-radius: 6px;
+                }
+
+                .title-component {
+                    font-family: Rubik;
+                    margin-bottom: 0;
+                    //text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 25px;
+                }
+
+                .content-select-buttons {
+                    display: inline-flex;
+                    align-items: self-end;
+                    width: 100%;
+                    place-content: center;
+
+                    select {
+                        box-shadow: 0px 8px 7px #b8b8b8;
+                        border: 2px solid #000;
+                    }
+
+                    .uno-trimestre, .dos-ano {
+                        margin-right: 10px;
+                    }
+
+                    .tres-botones {
+                        .mostrar-datos-json, .descargar-datos-json, .descargar-datos-excel {
+                            align-items: center;
+                            border: 2px solid #000;
+                            box-shadow: 0px 8px 7px #b8b8b8;
+                        }
+
+                        .mostrar-datos-json:hover, .descargar-datos-json:hover, .descargar-datos-excel:hover {
+                            color: #fefffe;
+                            background-color: #740624;
+                            transition: 0.4s;
+                        }
+                    }
+                }
+
+                .container-datos-json {
+                    //border: 1px solid #ccc;
+                    border-radius: 12px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    background-color: black;
+                    color: #7fff00;
+                    max-height: 700px;
+                    overflow-y: scroll;
+                }
+            }
+
+            //--------------TABLA MANT. -----------------
+            .contenedor-modal-1-tabla-mantenimiento, .contenedor-modal-1-tabla-no-entregado, .contenedor-modal-2-mat-entregados, .contenedor-modal-2-mat-entrega-parcial, .contenedor-modal-3-tabla-usuarios {
+                #servicesTable_wrapper, #usuariosTable_wrapper, #tableNoEntregado_wrapper, #tableEntregado_wrapper, #tableEntregadaParcial_wrapper {
+                    justify-self: center;
+                    max-width: 350px;
+                    overflow-x: scroll;
+
+                    .table-data-libreria {
+                        thead {
+                            background-color: #D1E7FF;
+                        }
+
+                        th {
+                            font-size: 12px;
+                            color: #000;
+                            text-align: center;
+                            //text-align-last: center;
+                        }
+
+                        td {
+                            font-size: 10px;
+                            color: #000;
+                            text-align: -webkit-center;
+                            text-align: -moz-center;
+                            text-align: -ms-center;
+                            text-align: -o-center;
+
+                            p {
+                                margin-bottom: 0;
+                                font-size: 10px;
+                                color: #000;
+                            }
+                        }
+
+                        tbody tr:nth-child(odd) {
+                            background-color: #FFEAEE;
+                        }
+
+                        tbody tr:nth-child(even) {
+                            background-color: #FFF3F5;
+                        }
+
+                        tbody tr {
+                            transition: background 0s ease;
+                        }
+
+                        tbody tr:hover {
+                            background-color: #D1E7FF;
+                        }
+
+                        .btn-cifras {
+                            font-size: 12px;
+
+                            img {
+                                margin-left: 5px;
+                            }
+                        }
+
+                        button {
+                            //background-color: #fefffe;
+                            display: flex;
+                            font-size: 9px;
+                            border: none;
+                            margin-bottom: 5px;
+                            width: 100%;
+                            place-content: center;
+                        }
+
+                        button:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        button:hover {
+                            //color: #fefffe;
+                            //background-color: #19ba2d;
+                            transition: .4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //-------------- MODALES EN GENERAL -----------------
+    .modal {
+        .modal-dialog  {
+            .modal-content {
+                .modal-header {
+                    text-align: center;
+                }
+
+                .modal-body {
+                    overflow-wrap: break-word;
+
+                    form {
+                        .form-group {
+                            label {
+                                margin-top: 10px;
+                            }
+                        }
+
+                        .btn {
+                            margin-top: 8px;
+                        }
+                    }
+
+                    u {
+                        text-decoration: none;
+                        margin-bottom: 16px;
+
+                        ol{
+                            height: 24px;
+                            margin: 0;
+                        }
+
+                        ol:last-child {
+                            margin-bottom: 16px
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .component-gestion-mantenimiento {
+        .content-main-usuario {
+            .perfil-inicio-sesion {
+                .content-perfil {
+                    display: flex;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .tabs-main-content {
+            .tab-list {
+                display: flex;
+                padding: 5px 0px;
+                margin-bottom: 5px;
+
+                .nav-item {
+                    margin: 6px 2px;
+
+                    .nav-link {
+                    font-size: 8px;
+                    padding: 4px 7px;
+
+                        img {
+                            width: 18px;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+            }
+
+            .tab-content {
+                .contenedor-modal-1-tabla-mantenimiento, .contenedor-modal-1-tabla-no-entregado, .contenedor-modal-2-mat-entregados, .contenedor-modal-2-mat-entrega-parcial, .contenedor-modal-3-tabla-usuarios {
+                    #servicesTable_wrapper, #usuariosTable_wrapper, #tableNoEntregado_wrapper, #tableEntregado_wrapper, #tableEntregadaParcial_wrapper {
+                        //max-width: 710px;
+                        //min-width: 710px;
+                        max-width: 100%;
+                        min-width: 100%;
+                    }
+                }
+
+                .contenedor-modal-2-insertar-mantenimiento, .contenedor-modal-4-insertar-registro, .contenedor-modal-5-insertar-servicio, .contenedor-modal-6-insertar-material, .contenedor-modal-7-insertar-json {
+                    //max-width: 710px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .component-gestion-mantenimiento {
+        .tabs-main-content {
+            .tab-list {
+                .nav-item {
+                    .nav-link {
+                        font-size: 10px;
+
+                        img {
+                            width: 30px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            // .tab-content {
+            //     .contenedor-modal-1-tabla-mantenimiento, .contenedor-modal-1-tabla-no-entregado, .contenedor-modal-2-mat-entregados, .contenedor-modal-2-mat-entrega-parcial, .contenedor-modal-3-tabla-usuarios {
+            //         #servicesTable_wrapper, #usuariosTable_wrapper, #tableNoEntregado_wrapper, #tableEntregado_wrapper, #tableEntregadaParcial_wrapper {
+            //             max-width: 982px;
+            //             min-width: 982px;
+            //             max-width: 100%;
+            //             overflow-x: hidden;
+            //         }
+            //     }
+
+            //     .contenedor-modal-2-insertar-mantenimiento, .contenedor-modal-4-insertar-registro, .contenedor-modal-5-insertar-servicio, .contenedor-modal-6-insertar-material {
+            //         max-width: 982px;
+            //         max-width: 100%;
+            //         overflow-x: hidden;
+            //     }
+            // }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .component-gestion-mantenimiento {
+        .tabs-main-content {
+            .tab-list {
+                .nav-item {
+                font-size: 13px;
+
+                    .nav-link {
+                        font-size: 14px;
+                        img {
+                            width: 34px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            // .tab-content {
+            //     .contenedor-modal-1-tabla-mantenimiento, .contenedor-modal-1-tabla-no-entregado, .contenedor-modal-2-mat-entregados, .contenedor-modal-2-mat-entrega-parcial, .contenedor-modal-3-tabla-usuarios {
+            //         #servicesTable_wrapper,  #usuariosTable_wrapper, #tableNoEntregado_wrapper, #tableEntregado_wrapper, #tableEntregadaParcial_wrapper {
+            //             max-width: 1200px;
+            //             min-width: 1200px;
+            //         }
+            //     }
+
+            //     .contenedor-modal-2-insertar-mantenimiento, .contenedor-modal-4-insertar-registro, .contenedor-modal-5-insertar-servicio, .contenedor-modal-6-insertar-material {
+            //         max-width: 1200px;
+            //     }
+            // }
+        }
+    }
+}
