@@ -1,51 +1,66 @@
-//Descripcion//
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Sitio web intuitivo adaptado a móvil donde el cliente tenga la url que la redireccione a la página con su respectivo login por seguridad. Una vez ingresada ella podrá acceder a todos los registros, como también eliminar, editar o agregar una nueva ave.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-//Marco Teorico//
+## About Laravel
 
-Una señora (amante de las aves) cuenta con un corral grande con diferentes tipos de aves, en donde se les da alimento y hay familiares que apoyan con su cuidado. Mi tía quiere llevar un control de cuantas aves, especies, alimentos, cuidadores hay, como también cada cuando se les da de comer y donde están ubicadas las aves dentro del corral.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-//Lenguajes//
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Desarrollo en lenguaje JAVA + Springboot
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-//Patron de diseño//
+## Learning Laravel
 
-Patrón de diseño: MVC (Model-View-Controller)
-Este patrón es ideal para aplicaciones de gestión como la que mencionas porque:
-Angular (Frontend - View): Maneja la capa de presentación, mostrando datos y permitiendo interacciones con los usuarios.
-SpringBoot (Backend - Controller y Model): Actúa como intermediario entre el frontend y la base de datos (PostgreSQL), gestionando la lógica del negocio y las operaciones sobre los datos.
-PostgreSQL (Base de datos): Provee la persistencia de los datos, organizada de manera estructurada.
-Este enfoque separa las responsabilidades claramente, facilitando el mantenimiento, la escalabilidad y el trabajo en equipo.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-//Servicios Web de Terceros//
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-Servicio: OpenWeatherMap (Gratis para nivel básico)
-Es un servicio gratuito (con opciones de pago para funciones avanzadas) que proporciona:
-Datos meteorológicos actuales, históricos y pronósticos.
-API REST fácil de integrar con Angular y SpringBoot.
-Útil si tu aplicación requiere mostrar el clima en las ubicaciones donde se encuentran las aves o condiciones ambientales relevantes.
-El plan gratuito permite un número limitado de solicitudes diarias, suficiente para proyectos pequeños o en desarrollo. Perfecto si buscas un servicio confiable y sin costo inicial.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-//Servicio Web Propio//
+## Laravel Sponsors
 
-Funcionalidades del servicio web propio:
-Gestión de aves:
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-CRUD (Crear, Leer, Actualizar, Eliminar) para aves.
-Registro de especies, características, hábitats y estado de conservación.
+### Premium Partners
 
-Control de ubicaciones:
-Registrar las ubicaciones geográficas de las aves.
-Integración con coordenadas geográficas usando sistemas como Mapbox o Google Maps.
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-Seguimiento de actividades:
-Registro de actividades como migraciones, salud, y alimentación.
-Gestión de reportes o historiales.
+## Contributing
 
-Autenticación y roles de usuario:
-Permitir que diferentes usuarios (administradores, investigadores, público general) accedan según su rol.
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Reportes dinámicos:
-Generar informes en tiempo real (JSON o CSV) sobre los datos gestionados.
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
